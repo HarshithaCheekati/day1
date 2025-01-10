@@ -1,0 +1,43 @@
+let a=prompt("Enter a");
+         let e=prompt("Enter b");
+         let c=a+e;
+         if((a>300 || e>300) && a+e<500){
+           alert("team up")
+         }else{
+             alert(" not eligible to team up") 
+         }
+
+        //Write a program to check wheather the number is divisible by 2 and 3 and both (take prompt)
+        let a=parseInt(prompt("Enter the value" ))
+         if(a % 2 === 0 && a % 3 === 0){
+             document.write("It is divisible by 2 and 3 both")
+         }else{
+             document.write("It is not divisible by 2 and 3 both")
+         }
+
+        //write a program to find the largest number out of three numbers expected from the user
+        let b=prompt("Enter the value")
+        let c=prompt("Enter the value")
+        let d=prompt("Enter the value")
+        if(b>=c && b>=d){
+            largert=b;
+        }else if(c>=b && c>=d){
+            largest =c;
+        }else{
+             largest=d;
+        }
+         document.write("the greater value is"+largest);
+
+        //Accept the following from the user and calculate the percentage of classes attended:
+        //a)Total number of working days
+        //b)Total number of days for absent
+        //After calculating percentage show that ,if the percentage is less than 75,then student will not be eligible to write exam
+        let a=prompt("Enter the value")
+        let e=prompt("Enter the value")
+        u=a-e;
+        h=(u/a)*100;
+        if(h>75){
+            document.write("Eliglible to write the exam")
+        }else {
+            document.write("not eliglible to write the exam")
+        }
