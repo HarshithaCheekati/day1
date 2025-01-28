@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function greet(name, callback){
+        //     console.log("hello"+name);
+        //     callback();
+        // }
+        // function goodbye(){
+        //     console.log("GoodBye!")
+        // }
+        // greet("harshitha",goodbye);
+
+    //     b=function(){
+    //         console.log("goodbye");
+    //     }
+    //     ()
+    //     // greet("harshitha",function(){
+    //     //     console.log("GoodBye")
+   
+    //     // });
+
+        
+    //     const greet = function (name, callback) {
+    //          console.log("Hello, " + name);
+    //          callback(); 
+    //     };
+    //     greet("harshitha", function () {
+
+    //          console.log("GoodBye");
+    //     });
+
+       
+    //     function fetchData(callback){
+    //           console.log("Fetching data…")
+    //           setTimeout(function(){
+    //           console.log("Data fetched");
+    //           callback();
+    //     },2000);
+    //     }
+        
+    //     function processData(){
+    //        console.log("Processing the fetching data..")
+    //    }
+    //    fetchData(processData);
+
+       
+    //    function registeration(username,email,callback){
+    //           console.log("registering user:"+username);
+    //           setTime(function(){
+    //           console.log("user"+username +"registered successfully");
+    //           callback(email);
+    //     },2000);
+    //     }
+
+    // let mypromise = new promise((resolve ,reject)=>{
+    //  let success =false;
+    //  if(success){
+    // resolve("The operation is successfull")
+    // } else{
+    // reject("The operation failed")
+    // }
+    // });
+    // mypromise.then(result=>{
+    //       Console.log(result);
+    // });
+    // mypromise.catch(error=>{
+    //       Console.log(error);
+    // });
+
+    
+
+
+
+
+let promise=new Promise((resolve ,reject) =>{
+resolve(5);
+})
+promise
+.then(result =>{
+console.log(result);
+return result *2
+//return a new value
+})
+.then(result =>{
+console.log(result);
+return result +3
+//return a new value
+})
+.then(result=>{
+console.log(result);
+
+})
+.catch(error=>{
+Console.log("error" ,error);
+})
+
+
+
+
+</script>
+</body>
+</html>

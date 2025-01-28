@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // for(let i=1 ;i<=8 ;i=i+2){
+        //     if(i>=4){
+        //         //5>=4 true
+        //         break
+        //     }
+        //     console.log(i)
+        // }//1234678
+
+        // for(let i=1 ;i<=8 ;i=i+2){
+        //     if(i>5){
+        //         continue
+        //     }
+        //     console.log(i)
+        // }
+        
+        //outer loop
+        // for(let i=1 ;i<=3 ;i++){
+        //     document.write(i,"<br>");
+        // //inner loop
+        // for(let j=1 ;j<=4 ;j++){
+        //     document.write(j," ");   
+        // }
+        // document.write("<br>");
+        // } 
+
+        // let n = 5;
+        // for (let i = 1; i <= n; i++) {
+        //     let s = "* ";
+        //     document.write(s.repeat(i));
+        // }
+
+        let n = 5; 
+        for (let i = 1; i <= n; i++) { 
+            let a = "* "; 
+            let s = '_'; 
+            console.log(a.repeat((n - i)) + s.repeat(i * 2 - 1)); 
+        }
+    </script>
+</body>
+</html>
