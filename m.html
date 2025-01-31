@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- <h1> Removing Child Node</h1>
+    <h2> I am Harshitha</h2>
+    <ul>
+        <li>harshitha</li>
+        <li>hanmitha</li>
+        <li>srividya</li>
+    </ul> -->
+
+    <div id="a">
+        <h1 id="re">Ravi</h1>
+        <h1 >Ram</h1>
+    </div>
+
+    <div id="b">
+        <h1>srividya</h1>
+        <h1>yamini</h1>
+    </div>
+  
+    <script>
+        // let t=document.createElement('h2')
+        // t.className='tt'
+        // t.textContent="Hello harshitha"
+        // console.log(t)
+        // document.body.appendChild(t)
+
+        // const t=['harshitha' , 'hanmitha' , 'srividya']
+        // for(let i=0 ; i<t.length ;i++){
+        //     let tt=document.createElement("h1")
+        //         tt.className="a"
+        //         tt.textContent=t[i];
+        //         console.log(tt)
+        // }
+
+        // let title 
+        // for(let i=0; i<3 ;i++){
+        //    title=document.createElement('h2')
+        //    title.className='tt'
+        //    title.textContent=i
+        //    console.log(title)
+        // }
+
+        // const ul =document.querySelector('ul')
+        // const lists =document.querySelectorAll('li')
+        // for(const list of lists){
+        //     console.log(`Removeing: ${list.textContent}`)
+        //     ul.removeChild(list)
+        // }
+
+    //    let n=document.createElement("h2")
+    //    n.textContent="Harshitha is team lead"
+    //    //get the parent element
+    //    let p=document.getElementById("b")
+    //    //append the nwe element to the parent
+    //    p.appendChild(n)
+    //    //log the innertext
+    //    console.log(p.innerText)
+    
+    // let n=document.createElement("h2")
+    // n.textContent="Harshitha"
+    //   //get the parent element  
+    // let p=document.getElementById("b")
+    // console.log(p.innerText)
+    // //    //append the nwe element to the parent
+    // p.appendChild(n)
+    // //    //log the innertext
+    // console.log(p)
+    // console.log(p.innerText)
+    
+    // let n=document.createElemnet("h2")
+    // n.textContent="Rahul"
+    // let q=document.getElementById("c")
+    // let l=document.getElementById('r')
+    // q.insertBefore(n ,c)
+    // console.log(p)
+
+    // let n=document.createElement("h1")
+    // n.textContent="Rahul"
+    // let p=document.getElementById("a")
+    // let l=document.getElementById('r')
+    // p.insertBefore(n,l)
+
+    //insert before ravi
+    // let nn=document.createElement("h1")
+    // nn.textContent="pavani"
+    // let pp=document.getElementById("a")
+    // let ll=document.getElementById('rr')
+    // pp.insertBefore(nn ,ll)
+
+    // let b=document.getElementById("b")
+    // b.remove()
+
+    let n=document.getElementById("a")
+    let l=document.getElementById("re")
+    console.log(l)
+    n.removeChild(l)
+
+
+</script>
+</body>
+</html>
