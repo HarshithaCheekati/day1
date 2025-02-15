@@ -4,14 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body{
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+        }
+        .light-bulb{
+            width: 150px;
+        }
+        .button{
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            color: rgb(43, 226, 110);
+            background-color: blue;
+        }
+    </style>
 </head>
-<body>
+<body id="body">
+    <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-off-img.png" alt="" class="light-bulb" id="bulbImage"/>
+    <button class="button" id="toggleButton" onclick="toggleLight()">Turn On</button>
+
     <script>
-        //example
-        let a="sai"
-        let b="kumar"
-        let age = 30
-        console.log(`I am ${a+" "+b},my age is ${age} is years old`)
+        let isOn=false;
+        function toggleLight(){
+            const body=document.getElementById("body")
+            const bulbImage=document.getElementById('bulbImage')
+            const toggleButton=document.getElementById('toggleButton');
+            isOn=!isOn;
+            if(isOn){
+                body.style.backgroundColor='skyblue';
+                bulbImage.src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-on-img.png";
+                toggleButton.innerText="Turn off";
+            }else{
+                body.style.backgroundColor='lightpink';
+                bulbImage.src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-off-img.png";
+                toggleButton.innerText="turn on";
+            }
+
+        }
     </script>
+
+    
 </body>
 </html>

@@ -1,0 +1,298 @@
+React js:
+--create a element
+--js:
+--let a ==document .createElement('h1')
+console.log(a)
+
+To create a element by React js:
+--React.createElement('h1')
+React.createElement(type ,prop)
+-type = tag name(div ,h1,p)
+props =className ,id ,onclick
+--to display the element
+--ReactDOM.createRoot()
+--ReactDOM.render()--to display the element
+Syntax:
+Reactelement -what to render
+Container= where to render
+
+Intro to JSX:
+(javaScript XML) : is a syntax extension for js in react js ;it allow us to write html code in react
+--make us easier to write HTML in react
+JSX:JSX code gets compiled into JS
+Babel: a tool converts translates into js
+
+expression in JSX:
+With jsx ,you can write the expression inside the{} 
+This allows us to embed (insert)
+<div id="a"></div>
+    <script type="text/babel">
+        const n=10;
+        const m=<h1>React is {n*2} times better than jsx</h1>
+        const r=ReactDOM.createRoot(document.getElementById('a'))
+        r.render(m)
+using a function call:
+you can call the function call directly within the jsx expressions
+
+<div id ="a"></div>
+<script type="text/babel">
+function getgreeting(name){
+return 'Hello,${name}
+return 'Hello,${name}!Welcome to React'
+}
+function Greeting(){
+const name="sai"
+return<h1>{getGreeting{name}</h1>
+}
+
+React JS:
+--create element:
+
+React.createElement()
+syntax:
+React.createElement()
+Type =tag name ;(h ,p ,div)
+props = className ,id
+
+--ReactDOM.createRoot();
+--render
+
+JSX:
+JavaScript XML is a extension for Js:
+IT allows us to write HTML code in React
+
+The JSX code gets compiled into JS
+Babel : A tool converts HTML code in JS
+--all the HTML tag must be closed
+
+1)create 
+
+
+inder.html: The main html file that servers  as the entry point for the app
+scr/inder.js: The javascript entry point for the react app where the DOM is rendered
+scr/App.js : the main components that servers as the root of the component tree
+scr/componenets: A folder to store reusable components 
+
+1)Components:(core building blocks of a react application)
+--the help to create reusable block of code
+--if any thing is goes wrong in UI,it is easy to findout
+
+import './App.css';
+const Welcome=()=>h1 className='Message'>Hello sai</h1>
+function App(){
+return(
+<div className='App'>
+<welcome/>
+</div> 
+)
+}
+default
+
+
+App.css:
+.message{
+color: blue;
+background-color:
+front-size: 40px;
+text-align: center;
+width:30%;
+margin-left: 80px;
+}
+
+welcome.js:
+import React from 'react'
+const Welcome=(props)=>{
+const{name ,greeting}=props;
+return(
+<h1 className='message'>{greeting},{name}</h1>
+)
+}
+export default App;
+
+
+welcome.js:
+const Welcome=(props)=>{
+const(name ,greeting}=props;
+retirn(
+<h1 className='message'>{greeting},{name}</h1?
+)
+}
+export default welcome;
+
+
+app.js:
+import React from 'react;
+const App=()=>{
+return(
+<div style={{textAlign:'center',color:'red'}}
+<Welcome name="Rahul" greeting="Hello"/>
+<Welcome name="sai" greeting="hi"/>
+</div>
+)
+}
+export default App;
+
+Componenet:
+Conditional Rendering:
+
+Greeting.js
+import React from 'react';
+function Greeting({isloggedIn}){
+if(isLoggedIn){
+return <h1>Welcome Back</h1>
+}else{
+return <h1>Please Login</h1>
+}
+}
+export default Greeting
+
+App.js:
+import React from 'react'; 
+function App(){
+const isLoggedIn =True;
+return(
+<div className="App">
+<Greeting isLoggedIn={isLoggedIn}/>
+</div>
+)
+}
+export default App;
+
+
+error-command;
+web vitals --npm install web vitals
+
+#lists and keys:
+In React , a list is a cooection of items you want to show on screen
+#keys: Keys in react helps us to keep the track of items in a list
+--React known which items you have changed ; updated
+
+map() : elemements in array
+State:
+State in react:
+In react , state is a like a countainer that holds the data or information for a component.
+This data can be change over time based on user actions or events
+why state is Important:
+--it allows us the component to remember the
+Ex: if you click a button to change a color ; the state will store hold the color and show on the screen
+
+1)functional componenets:
+Syntax:
+Const[state variable , setstate function ]=use the initialvalue)
+1)statevariable : holds the current state(ex: name ,color)
+2)setStatefunction: A fuctionwhich is used to update the state
+
+React Hooks:
+---introduced on react 16.8 version
+---to manage state and life cycle features in functional componenets 
+
+State: is an essential part in react because it allows components to be dynamic, interactive and capable of responding to user input or change over time
+1)useStateHook:
+useState allows you to ass state to functional components
+
+syntax:
+const[state ,setState]=useState(initial value)
+state: This is current state
+setState-This is a function to update the state
+initial value: The value you want you set as the initial value
+#0
+#Button #
+
+#button #data 
+#onclick #remains
+#dynamic #
+ 
+
+ex:
+Toggling between thems
+
+React Memoization:
+--apps faster by remembering the result
+Ex:E-commerence website:
+Search for products:
+#keywords
+#sugestions
+#filter
+
+--useMemo hook to store the result are function
+#keywords filter
+Ex:E-commerece search by using memorization
+
+React memo:
+--it is a HOC(high order component) is not a Reacr hook
+--it will stop unnecessary -rendering of functional components of its props
+--it will improve the performance of the functional components
+#keyword
+#sho
+#suggestions
+#
+
+
+When ever we click on the button (increment) in Child
+App.js:
+<div>
+c1
+c2
+</div>
+
+use Context():
+props(properties) in React are used to pass data from parent components
+prop drilling:is the process of passing data from parent to deeply child component throught intermediate components, by passing data as props at each level
+
+function App(){
+  const data="Hello I am harshitha"
+  return(
+    <div>
+      <user1 data={data}/>
+    </div>
+  );
+};
+
+//user1 component name
+function User1({data}){
+  return<User2 data={data}/>
+}
+//user2 component
+function User2({data}){
+  return<User3 data={data}/>
+}
+//user3 component
+function User3({data}){
+  return<User4 data={data}/>
+}
+
+function User4({data}){
+  return<div>{data}</div>
+}
+export default App;
+
+React Hooks
+React Reducer():
+Cllback()
+React Reducer();
+A reducer is a function that helps to update(like score ,a list) based on action we take
+1)current State : The current value of a state
+2)Action :
+Example:
+Action : add or remove an item
+State: initial value (3 items) #3-apples
+--Tracking
+callback:
+--in react, a call back is function that is passed as an argument to another function
+--call backs are often  
+
+useRef:
+useState: change the state ; React will render the component and update the UI with the new element
+
+useRef: changing the value by using useRed doesnot re-render; stays the same even the value is updated
+
+use Ref: when you change the value stored in ref.current .This is useful when you need to stored values or interact .
+it doesnot make the component render
+This is useful when you need to store values or interact with Dom elements with out extra renders
+
+commonly used:
+1)accessing a Dom element : like scrolling to screen 
+Focusing the input 
+2)storing values : keep track of values that don't need to update the UI but need to remembered the previous state 
+
+
